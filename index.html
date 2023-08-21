@@ -23,10 +23,10 @@
     </style>
   </head>
   <body>
-    <header class="bg-[#F9F6E2]">
+    <header class="bg-[#F9F6E2] px-4">
       <!-- Header Info -->
       <div
-        class="container mx-auto flex items-center justify-center gap-6 py-20"
+        class="container mx-auto flex items-center justify-center flex-col md:flex-row gap-6 py-20"
       >
         <div
           class="flex items-center justify-center flex-col gap-10 font-medium"
@@ -53,15 +53,17 @@
     </header>
 
     <!-- Main Section -->
-    <main class="bg-[#F8F8F8] py-28">
-      <div class="container mx-auto flex gap-6">
+    <main class="bg-[#F8F8F8] py-28 px-4">
+      <div class="container mx-auto flex flex-col lg:flex-row gap-6">
         <!-- Categories -->
         <div class="flex flex-col flex-grow gap-14">
           <!-- Category-1 -->
           <div>
-            <h2 class="text-4xl font-semibold mb-4">Kitchenware</h2>
+            <h2 class="text-4xl font-semibold mb-4 text-center md:text-left">
+              Kitchenware
+            </h2>
             <!-- Cards -->
-            <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
               <!-- card 1 -->
               <div
                 onclick="getCardInfo(this)"
@@ -139,9 +141,11 @@
           <!-- Category-1 end -->
           <!-- Category-2 -->
           <div>
-            <h2 class="text-4xl font-semibold mb-4">Sportsware</h2>
+            <h2 class="text-4xl font-semibold mb-4 text-center md:text-left">
+              Sportsware
+            </h2>
             <!-- Cards -->
-            <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
               <!-- card 1 -->
               <div
                 onclick="getCardInfo(this)"
@@ -226,7 +230,7 @@
             <div class="flex mt-4">
               <input
                 id="couponInput"
-                class="p-3 border rounded-l-md"
+                class="p-3 border rounded-l-md flex-1"
                 type="text"
                 placeholder="Coupon code"
               />
