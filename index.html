@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +9,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
     />
     <title>20% off - Summer Sale</title>
     <style>
@@ -200,11 +205,66 @@
           <!-- Have coupon -->
           <div class="bg-white p-6">
             <h3 class="text-2xl font-medium">Have coupon?</h3>
-            <div>
-              <input type="text" placeholder="Coupon code" />
-              <button>Apply</button>
+            <div class="flex mt-4">
+              <input
+                class="p-3 border rounded-l-md"
+                type="text"
+                placeholder="Coupon code"
+              />
+              <button
+                class="bg-[#E527B2] text-white font-semibold text-xl py-2 px-4 rounded-r-md"
+              >
+                Apply
+              </button>
             </div>
           </div>
+          <!-- Have coupon end -->
+          <!-- Make purchase -->
+          <div class="bg-white p-6 flex flex-col gap-4">
+            <ol class="list-decimal ml-7 text-2xl font-medium">
+              <li class="py-1">Home Cooker</li>
+              <li class="py-1">Home Cooker</li>
+              <li class="py-1">Home Cooker</li>
+            </ol>
+            <div class="border border-gray-100"></div>
+            <div class="text-xl font-semibold">
+              <h3 class="inline">Total price:</h3>
+              <span class="text-gray-400">200.00TK</span>
+            </div>
+            <div class="text-xl font-semibold">
+              <h3 class="inline">Discount:</h3>
+              <span class="text-gray-400">200.00TK</span>
+            </div>
+            <div class="text-xl font-semibold">
+              <h3 class="inline">Total:</h3>
+              <span class="text-gray-400">200.00TK</span>
+            </div>
+            <div class="border border-gray-100"></div>
+            <button
+              onclick="purchase_modal_1.showModal()"
+              class="bg-[#E527B2] text-white font-semibold text-xl py-2 px-4 rounded-md"
+            >
+              Make Purchase
+            </button>
+          </div>
+          <!-- Make purchase end-->
+          <!-- Modal -->
+          <dialog id="purchase_modal_1" class="modal">
+            <form
+              method="dialog"
+              class="modal-box flex flex-col gap-6 items-center justify-center py-20"
+            >
+              <img src="./images/congo.png" alt="" />
+              <h2 class="text-5xl font-bold">Congratulations</h2>
+              <p class="text-xl text-gray-400">Your Purchased the product</p>
+              <button
+                class="bg-[#E527B2] text-white font-semibold text-xl py-2 px-4 rounded-md"
+              >
+                Go Home
+              </button>
+            </form>
+          </dialog>
+          <!-- Modal end -->
         </div>
         <!-- Sidebar-end -->
       </div>
