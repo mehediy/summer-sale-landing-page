@@ -26,6 +26,7 @@ function getCardInfo(data) {
   const finalTotal = total - discounted;
   grandTotal.innerText = finalTotal.toFixed(2);
   purchaseBtn.disabled = total === 0;
+  couponBtn.disabled = total < 200;
 }
 
 document
@@ -33,12 +34,12 @@ document
   .addEventListener("click", function (event) {
     let coupon = event.target.parentNode.childNodes[1].value;
 
-    if (coupon == "SELL200" && total >= 200) {
+    if (coupon == "SELL200") {
       discount = 0.2;
       event.target.parentNode.childNodes[1].value = "";
       couponBtn.disabled = true;
     } else {
-      alert("Invalid coupon code or minimum total not met.");
+      alert("Invalid coupon code");
     }
 
     let discounted = total * discount;
@@ -47,10 +48,6 @@ document
     const finalTotal = total - discounted;
     grandTotal.innerText = finalTotal.toFixed(2);
   });
-
-couponInput.addEventListener("input", function () {
-  couponBtn.disabled = couponInput.value === "";
-});
 
 // Reset values and clear list items
 purchaseBtn.addEventListener("click", function () {
@@ -61,4 +58,5 @@ purchaseBtn.addEventListener("click", function () {
   grandTotal.innerText = "0.00";
   cartItems.innerHTML = "";
   purchaseBtn.disabled = true;
+  couponBtn.disabled = true;
 });
