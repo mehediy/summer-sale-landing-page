@@ -1,17 +1,6 @@
 let total = 0.0;
 let discount = 0.0;
 
-function discountCalc(total) {
-  const couponInput = document.getElementById("couponInput");
-  const coupon = couponInput.value;
-
-  if (coupon === "SELL200") {
-    return total * 0.2; // 20% discount
-  } else {
-    return 0;
-  }
-}
-
 function getCardInfo(data) {
   const name = data.childNodes[3].childNodes[3].innerText;
   const price = data.childNodes[3].childNodes[5].innerText.split(" ")[0];
@@ -29,11 +18,20 @@ function getCardInfo(data) {
   totalPrice.innerText = total.toFixed(2);
   grandTotal.innerText = total.toFixed(2);
 
-  discount = discountCalc(total);
+  discount = total * discount;
+
   discountPrice.innerText = discount.toFixed(2);
 
   const finalTotal = total - discount;
   grandTotal.innerText = finalTotal.toFixed(2);
-
-  console.log(discount);
 }
+
+document
+  .getElementById("couponBtn")
+  .addEventListener("click", function (event) {
+    let coupon = event.target.parentNode.childNodes[1].value;
+    if (coupon === "SELL200" && total >= 200) {
+      discount = 0.2;
+      coupon = "";
+    }
+  });
