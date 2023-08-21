@@ -31,7 +31,7 @@
         <div
           class="flex items-center justify-center flex-col gap-10 font-medium"
         >
-          <h3 class="text-3xl uppercase">--Sale Fever</h3>
+          <h3 class="text-3xl uppercase">--Sale Fever--</h3>
           <h2 class="text-6xl text-center font-bold max-w-3xl">
             Purchase TK 200 or above & get
             <span class="text-[#E527B2]">20% off</span>
@@ -180,12 +180,12 @@
                   <div class="flex gap-1">
                     <img src="./icons/star.svg" alt="" />
                     <img src="./icons/star.svg" alt="" />
-                    <img src="./icons/star.svg" alt="" />
+                    <img src="./icons/star-h.svg" alt="" />
                     <img src="./icons/star-h.svg" alt="" />
                     <img src="./icons/star-h.svg" alt="" />
                   </div>
                   <h3 class="font-semibold text-xl">K. Accessories</h3>
-                  <p class="text-gray-400 text-xl">39.00 TK</p>
+                  <p class="text-gray-400 text-xl">90.00 TK</p>
                 </div>
               </div>
               <!-- card 2 end -->
@@ -205,11 +205,11 @@
                     <img src="./icons/star.svg" alt="" />
                     <img src="./icons/star.svg" alt="" />
                     <img src="./icons/star.svg" alt="" />
-                    <img src="./icons/star-h.svg" alt="" />
+                    <img src="./icons/star.svg" alt="" />
                     <img src="./icons/star-h.svg" alt="" />
                   </div>
                   <h3 class="font-semibold text-xl">K. Accessories</h3>
-                  <p class="text-gray-400 text-xl">39.00 TK</p>
+                  <p class="text-gray-400 text-xl">100.00 TK</p>
                 </div>
               </div>
               <!-- card 3 end -->
@@ -231,8 +231,9 @@
                 placeholder="Coupon code"
               />
               <button
+                disabled
                 id="couponBtn"
-                class="bg-[#E527B2] text-white font-semibold text-xl py-2 px-4 rounded-r-md"
+                class="enabled:bg-[#E527B2] disabled:bg-gray-300 text-white font-semibold text-xl py-2 px-4 rounded-r-md"
               >
                 Apply
               </button>
@@ -249,25 +250,27 @@
             <div class="text-xl font-semibold">
               <h3 class="inline">Total price:</h3>
               <span class="text-gray-400"
-                ><span id="totalPrice">00.00</span>TK</span
+                ><span id="totalPrice">0.00</span>TK</span
               >
             </div>
             <div class="text-xl font-semibold">
               <h3 class="inline">Discount:</h3>
               <span class="text-gray-400"
-                ><span id="discountPrice">00.00</span>TK</span
+                ><span id="discountPrice">0.00</span>TK</span
               >
             </div>
             <div class="text-xl font-semibold">
               <h3 class="inline">Total:</h3>
               <span class="text-gray-400"
-                ><span id="grandTotal">00.00</span>TK</span
+                ><span id="grandTotal">0.00</span>TK</span
               >
             </div>
             <div class="border border-gray-100"></div>
             <button
+              id="purchaseBtn"
+              disabled
               onclick="purchase_modal_1.showModal()"
-              class="bg-[#E527B2] text-white font-semibold text-xl py-2 px-4 rounded-md"
+              class="enabled:bg-[#E527B2] disabled:bg-gray-300 text-white font-semibold text-xl py-2 px-4 rounded-md"
             >
               Make Purchase
             </button>
