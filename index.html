@@ -63,7 +63,10 @@
             <!-- Cards -->
             <div class="grid grid-cols-3 gap-6">
               <!-- card 1 -->
-              <div class="bg-white p-4 rounded-md flex flex-col gap-4">
+              <div
+                onclick="getCardInfo(this)"
+                class="bg-white p-4 rounded-md flex flex-col gap-4"
+              >
                 <div
                   class="bg-gray-100 flex flex-col items-center p-6 rounded-md overflow-hidden"
                 >
@@ -77,14 +80,17 @@
                     <img src="./icons/star-h.svg" alt="" />
                     <img src="./icons/star-h.svg" alt="" />
                   </div>
-                  <h3 class="font-semibold text-xl">K. Accessories</h3>
-                  <p class="text-gray-400 text-xl">39.00 TK</p>
+                  <h3 class="font-semibold text-xl">Spoon Set</h3>
+                  <p class="text-gray-400 text-xl">200.00 TK</p>
                 </div>
               </div>
               <!-- card 1 end -->
 
               <!-- card 2 -->
-              <div class="bg-white p-4 rounded-md flex flex-col gap-4">
+              <div
+                onclick="getCardInfo(this)"
+                class="bg-white p-4 rounded-md flex flex-col gap-4"
+              >
                 <div
                   class="bg-gray-100 flex flex-col items-center p-6 rounded-md overflow-hidden"
                 >
@@ -98,14 +104,17 @@
                     <img src="./icons/star-h.svg" alt="" />
                     <img src="./icons/star-h.svg" alt="" />
                   </div>
-                  <h3 class="font-semibold text-xl">K. Accessories</h3>
-                  <p class="text-gray-400 text-xl">39.00 TK</p>
+                  <h3 class="font-semibold text-xl">Tools Set</h3>
+                  <p class="text-gray-400 text-xl">1350.00 TK</p>
                 </div>
               </div>
               <!-- card 2 end -->
 
               <!-- card 3 -->
-              <div class="bg-white p-4 rounded-md flex flex-col gap-4">
+              <div
+                onclick="getCardInfo(this)"
+                class="bg-white p-4 rounded-md flex flex-col gap-4"
+              >
                 <div
                   class="bg-gray-100 flex flex-col items-center p-6 rounded-md overflow-hidden"
                 >
@@ -119,8 +128,8 @@
                     <img src="./icons/star-h.svg" alt="" />
                     <img src="./icons/star-h.svg" alt="" />
                   </div>
-                  <h3 class="font-semibold text-xl">K. Accessories</h3>
-                  <p class="text-gray-400 text-xl">39.00 TK</p>
+                  <h3 class="font-semibold text-xl">Home Cooker</h3>
+                  <p class="text-gray-400 text-xl">3200.00 TK</p>
                 </div>
               </div>
               <!-- card 3 end -->
@@ -134,7 +143,10 @@
             <!-- Cards -->
             <div class="grid grid-cols-3 gap-6">
               <!-- card 1 -->
-              <div class="bg-white p-4 rounded-md flex flex-col gap-4">
+              <div
+                onclick="getCardInfo(this)"
+                class="bg-white p-4 rounded-md flex flex-col gap-4"
+              >
                 <div
                   class="bg-gray-100 flex flex-col items-center p-6 rounded-md overflow-hidden"
                 >
@@ -155,7 +167,10 @@
               <!-- card 1 end -->
 
               <!-- card 2 -->
-              <div class="bg-white p-4 rounded-md flex flex-col gap-4">
+              <div
+                onclick="getCardInfo(this)"
+                class="bg-white p-4 rounded-md flex flex-col gap-4"
+              >
                 <div
                   class="bg-gray-100 flex flex-col items-center p-6 rounded-md overflow-hidden"
                 >
@@ -176,7 +191,10 @@
               <!-- card 2 end -->
 
               <!-- card 3 -->
-              <div class="bg-white p-4 rounded-md flex flex-col gap-4">
+              <div
+                onclick="getCardInfo(this)"
+                class="bg-white p-4 rounded-md flex flex-col gap-4"
+              >
                 <div
                   class="bg-gray-100 flex flex-col items-center p-6 rounded-md overflow-hidden"
                 >
@@ -221,23 +239,28 @@
           <!-- Have coupon end -->
           <!-- Make purchase -->
           <div class="bg-white p-6 flex flex-col gap-4">
-            <ol class="list-decimal ml-7 text-2xl font-medium">
-              <li class="py-1">Home Cooker</li>
-              <li class="py-1">Home Cooker</li>
-              <li class="py-1">Home Cooker</li>
-            </ol>
+            <ol
+              id="cartItems"
+              class="list-decimal ml-7 text-2xl font-medium"
+            ></ol>
             <div class="border border-gray-100"></div>
             <div class="text-xl font-semibold">
               <h3 class="inline">Total price:</h3>
-              <span class="text-gray-400">200.00TK</span>
+              <span class="text-gray-400"
+                ><span id="totalPrice">00.00</span>TK</span
+              >
             </div>
             <div class="text-xl font-semibold">
               <h3 class="inline">Discount:</h3>
-              <span class="text-gray-400">200.00TK</span>
+              <span class="text-gray-400"
+                ><span id="discountPrice">00.00</span>TK</span
+              >
             </div>
             <div class="text-xl font-semibold">
               <h3 class="inline">Total:</h3>
-              <span class="text-gray-400">200.00TK</span>
+              <span class="text-gray-400"
+                ><span id="grandTotal">00.00</span>TK</span
+              >
             </div>
             <div class="border border-gray-100"></div>
             <button
@@ -269,5 +292,6 @@
         <!-- Sidebar-end -->
       </div>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
